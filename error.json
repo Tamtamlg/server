@@ -1,0 +1,7 @@
+{
+   "status": "E",
+   "error": {
+       "message": "Error message",
+       "code": 123 
+    }
+}
