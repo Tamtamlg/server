@@ -18,16 +18,16 @@ module.exports.login = function (req, res) {
 module.exports.api = function (req, res) {
   if (req.body.command === 'gettree1') {
     if (Math.floor(Math.random() * 10) < 8) {
-      console.log('level1-' + (Math.floor(Math.random() * (4 - 1)) + 1) + '.json')
-      fs.readFile('level1-' + (Math.floor(Math.random() * (4 - 1)) + 1) + '.json', 'utf8', function (err, contents) {
-		const jsonContent = JSON.parse(contents)
+      console.log('files/level1-' + (Math.floor(Math.random() * (4 - 1)) + 1) + '.txt')
+      fs.readFile('files/level1-' + (Math.floor(Math.random() * (4 - 1)) + 1) + '.txt', 'utf8', function (err, contents) {
+		    const jsonContent = JSON.parse(contents)
         res.status(200).json({
           jsonContent
         });
       });
     } else {
-      fs.readFile('error.json', 'utf8', function (err, contents) {
-		const jsonContent = JSON.parse(contents)
+      fs.readFile('files/error.txt', 'utf8', function (err, contents) {
+		    const jsonContent = JSON.parse(contents)
         res.status(200).json({
           jsonContent
         });

@@ -1,0 +1,8 @@
+{
+	"status": "S",
+    "data": {
+      "auth": true,
+      "token": "test-token",
+      "code": 0
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "S",
+  "data": {
+    "total": 4500,
+    "active": 4400,
+    "inactive": 50,
+    "alarm": 50
+  }
+}
