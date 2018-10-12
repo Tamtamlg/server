@@ -20,17 +20,11 @@ module.exports.api = function (req, res) {
     if (Math.floor(Math.random() * 10) < 8) {
       console.log('files/level1-' + (Math.floor(Math.random() * (4 - 1)) + 1) + '.txt')
       fs.readFile('files/level1-' + (Math.floor(Math.random() * (4 - 1)) + 1) + '.txt', 'utf8', function (err, contents) {
-		    const jsonContent = JSON.parse(contents)
-        res.status(200).json({
-          jsonContent
-        });
+        res.status(200).json(JSON.parse(contents));
       });
     } else {
       fs.readFile('files/error.txt', 'utf8', function (err, contents) {
-		    const jsonContent = JSON.parse(contents)
-        res.status(200).json({
-          jsonContent
-        });
+        res.status(200).json(JSON.parse(contents));
       });
     }
   }
