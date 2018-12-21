@@ -5,7 +5,7 @@ module.exports.login = function (req, res) {
     res.status(200).json({
         expired_at: '2018-07-21 16:09:50',
         role: 'admin',
-        token: 'LOg1QOpZPzVOFZaL-qf6hKqXcwUZcjx5U-sAfindBHsUEweVyj-FGan3vOLCBxW0csi-MTUzMjAwOTc5MQ=='
+        token: 'randomStringToken=='
     })
   } else {
     res.status(401).json({
@@ -13,7 +13,6 @@ module.exports.login = function (req, res) {
     })
   }
 }
-
 
 module.exports.api = function (req, res) {
   if (req.body.command === 'gettree1') {

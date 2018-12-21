@@ -1,7 +1,0 @@
-{
-  "status": "S",
-  "data": {
-    "content": "[Wed Jul 12 13:15:19 2017] systemd-journald[349]: Received request to flush runtime journal from PID",
-    "active": 1
-  }
-}

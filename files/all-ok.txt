@@ -1,7 +1,0 @@
-{
-	"status": "S",
-	"data": {
-		"active": 1,
-		"jobid": 321
-	}
-}
