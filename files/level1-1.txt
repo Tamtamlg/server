@@ -1,5 +1,5 @@
 {
-  "status": "S",
+  "success": true,
   "level1": [
     {
       "alarmItem": true,

@@ -3,9 +3,9 @@ const fs = require('fs');
 module.exports.login = function (req, res) {
   if (req.body.email && req.body.password) {
     res.status(200).json({
-        expired_at: '2018-07-21 16:09:50',
-        role: 'admin',
-        token: 'randomStringToken=='
+      expired_at: '2018-07-21 16:09:50',
+      role: 'admin',
+      token: 'randomStringToken=='
     })
   } else {
     res.status(401).json({
@@ -26,5 +26,18 @@ module.exports.api = function (req, res) {
         res.status(200).json(JSON.parse(contents));
       });
     }
+  }
+}
+
+module.exports.getLevel = function (req, res) {
+  if (Math.floor(Math.random() * 10) < 8) {
+    console.log('files/level1-1.txt')
+    fs.readFile('files/level1-1.txt', 'utf8', function (err, contents) {
+      res.status(200).json(JSON.parse(contents));
+    });
+  } else {
+    fs.readFile('files/error.txt', 'utf8', function (err, contents) {
+      res.status(200).json(JSON.parse(contents));
+    });
   }
 }

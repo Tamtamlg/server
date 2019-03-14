@@ -1,5 +1,5 @@
 {
-   "status": "E",
+   "success": false,
    "error": {
        "message": "Error message",
        "code": 123 
